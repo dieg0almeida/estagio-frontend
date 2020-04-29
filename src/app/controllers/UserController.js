@@ -13,7 +13,7 @@ module.exports = {
             //no response vem um monte de coisa, os dados ficam dentro do objeto data
             //dentro do objeto data tem um array owners com os dados
             console.log(response.data);
-            return res.render('consultation_page.njk');
+            return res.render('forgot_password_page.njk');
         } catch (err) {
             console.warn('Erro na API');
         }
