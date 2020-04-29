@@ -60,27 +60,29 @@
 						
 					</div>
 				
-					{% for i in range(0, 3) %}
-					<div class="row">
-						<div class="cell" data-title="ID">
-							1
+					{% for owner in owners %}
+
+						<div class="row">
+							<div class="cell" data-title="ID">
+								{{owner.owner_id}}
+							</div>
+							<div class="cell" data-title="PROPRIETÁRIO">
+								{{owner.name}}
+							</div>
+							<div class="cell" data-title="CPF">
+								{{owner.cpf}}
+							</div>
+							<div class="cell" data-title="ENDEREÇO">
+								{{owner.address}}
+							</div>
+							<div class="cell" data-title="BAIRRO">
+								{{owner.lot}}
+							</div>
+							<div class="cell" data-title="MAIS DETALHES">
+								<button class="button">Ver</button>
+							</div>
 						</div>
-						<div class="cell" data-title="PROPRIETÁRIO">
-							Augusto
-						</div>
-						<div class="cell" data-title="CPF">
-							000.000.000-00
-						</div>
-						<div class="cell" data-title="ENDEREÇO">
-							Rua Aquidauna
-						</div>
-						<div class="cell" data-title="BAIRRO">
-							São José
-						</div>
-						<div class="cell" data-title="MAIS DETALHES">
-							<button class="button">Ver</button>
-						</div>
-					</div>
+						
 					{% endfor %}
 
             	</div>

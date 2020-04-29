@@ -12,8 +12,9 @@ module.exports = {
             const response = await api.get('/owners');
             //no response vem um monte de coisa, os dados ficam dentro do objeto data
             //dentro do objeto data tem um array owners com os dados
-            console.log(response.data);
-            return res.render('forgot_password_page.njk');
+            const owners = [...response.data.owners]
+            console.log(owners);
+            return res.render('consultation_page.njk', {owners});
         } catch (err) {
             console.warn('Erro na API');
         }
