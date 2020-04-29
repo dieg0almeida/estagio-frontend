@@ -1,9 +1,8 @@
 
-//Essa parte serve para requisitar/pegar os dados do api que vai ser recebido em formato json , ai a partir disso é possivel passar esses dados pro nunjuks e trabalhar com eles
-// A OUTRA PARTE DESSE ARQUIVO ESTA NA PASTA 'CONTROLLER' NO ARQUIVO 'UserController.Js"
+const axios = require('axios');
 
-//cont axios = require('axios');
+const api = axios.create({ 
+    baseURL : 'https://estagiobackend.herokuapp.com/owners'
+});
 
-//const api = axios.create({ baseURL : 'aqui vai a url da api'});
-
-//module.exports = api;
+module.exports = api;
