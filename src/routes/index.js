@@ -6,7 +6,7 @@ const HomeController = require('../app/controllers/HomeController');
 
 
 routes.get('/', HomeController.index);
-routes.get('/sign_in', UserController.renderSingIn);
+routes.get('/sign_in', UserController.renderSignIn);
 
 
 module.exports = routes;

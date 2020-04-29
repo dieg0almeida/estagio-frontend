@@ -1,20 +1,23 @@
+//antes de usar a variável vcs precisam importar ela.
+const api = require('../services/api');
+
 module.exports = {
 
-    async getApi(){
+    //não precisa criar um método novo, pode fazer dentro do renderSignIn
+
+    async renderSignIn(req, res) {
         try {
-            const response = await api.get('./api');
+            //a string que vc passa como parâmetro no método get
+            //são as rotas, o exemplo que eu dei lá no grupo estava assim
+            const response = await api.get('/owners');
+            //no response vem um monte de coisa, os dados ficam dentro do objeto data
+            //dentro do objeto data tem um array owners com os dados
+            console.log(response.data);
+            return res.render('consultation_page.njk');
         } catch (err) {
             console.warn('Erro na API');
         }
-
-        console.log(reponse);
     },
-    
 
-    renderSingIn(req, res){
-        this.getApi
-        return res.render('consultation_page.njk');
-    },
- 
 }
 
