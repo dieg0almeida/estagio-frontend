@@ -13,6 +13,18 @@
   position: absolute;
 }
 
+#forgot-password-link{
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#forgot-password-link:hover{
+  color: green;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .form {
   
   border-radius: 6px;
