@@ -62,14 +62,14 @@
 				
 					{% for owner in owners %}
 
-						<div class="row">
+						<div class="row" id="table">
 							<div class="cell" data-title="ID">
 								{{owner.owner_id}}
 							</div>
 							<div class="cell" data-title="PROPRIETÁRIO">
 								{{owner.name}}
 							</div>
-							<div class="cell" data-title="CPF">
+							<div class="cell" id="CPF" data-title="CPF">
 								{{owner.cpf}}
 							</div>
 							<div class="cell" data-title="ENDEREÇO">

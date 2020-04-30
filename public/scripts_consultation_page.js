@@ -33,3 +33,21 @@ function checkFields(event){
           
     }
 }
+
+function formatCPF(number){
+    let open = [...number];
+    let exit=[];
+    for (var i=0;i<open.length;i++){
+       
+        if (i==3 || i==6){
+            exit.push(".");
+        }
+
+        if (i==9){
+            exit.push("-");
+        }
+        exit.push(open[i]);
+    }   
+    
+    return exit;
+}
