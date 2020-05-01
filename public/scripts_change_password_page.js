@@ -1,25 +1,41 @@
+var check;
 function checkFields(event){
 
     const valuesToCheck = [
         "newpassword",
         "confirmpassword",
     ] 
-
+    
     const isEmpty = valuesToCheck.find(function(value){
+        
+        var newpassword = document.querySelector('input#newpassword').value;
+        var confirmpassword = document.querySelector('input#confirmpassword').value;
 
         const checkIfIsString = typeof event.target[value].value ==="string"
         const checkIfIsEmpty = !event.target[value].value.trim()
 
         if(checkIfIsString && checkIfIsEmpty) {
+            check = 0
             return true
+            
+        }
+        if(newpassword != confirmpassword){
+            check = 1
+            return true
+            
         }
     })
 
     if(isEmpty){
 
         event.preventDefault()
-        
-        const text = document.createTextNode('Por favor, preencha os campos!')
+        if(check==0){
+            var text = document.createTextNode('Por favor, preencha os campos!')
+        }
+        if(check==1){
+            var text = document.createTextNode('As senhas não são iguais!')
+        }
+       
         const emptyFieldsElementeP = document.querySelector('div#emptyFields p')
 
         const button = document.querySelector('form button')
