@@ -7,9 +7,10 @@
 }
 
 #emptyFields p {
+  background: rgb(201, 31, 31);
   text-align: center;
   color: white;
-  text-shadow: 1px 1px 1px #111111;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   position: absolute;
 }
 

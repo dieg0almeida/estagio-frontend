@@ -22,5 +22,13 @@ module.exports = {
         }
     },
 
+    async renderForgotPassword(req, res) {
+        try {
+            return res.render('forgot_password_page.njk');
+        } catch (err) {
+            console.warn('Erro na chamada da página de forgot password.');
+        }
+    },
+
 }
 

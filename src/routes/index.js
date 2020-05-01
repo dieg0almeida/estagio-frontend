@@ -11,5 +11,7 @@ routes.get('/sign_in', UserController.renderSignIn);
 routes.get('/consultation', UserController.renderConsultation);
 routes.post('/consultation', UserController.renderConsultation);
 
+routes.get('/forgot_password', UserController.renderForgotPassword);
+
 
 module.exports = routes;
