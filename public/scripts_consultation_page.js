@@ -60,7 +60,7 @@ var Pagination = {
     // Utility
     // --------------------
 
-    // converting initialize data
+    // Convertendo dados iniciais
     Extend: function(data) {
         data = data || {};
         Pagination.size = data.size || 300;
@@ -68,19 +68,19 @@ var Pagination = {
         Pagination.step = data.step || 3;
     },
 
-    // add pages by number (from [s] to [f])
+    // Adiciona paginas por numero(Do [s] Até [f])
     Add: function(s, f) {
         for (var i = s; i < f; i++) {
             Pagination.code += '<a>' + i + '</a>';
         }
     },
 
-    // add last page with separator
+    // Adiciona o separador ... na ultima pagina
     Last: function() {
         Pagination.code += '<i>...</i><a>' + Pagination.size + '</a>';
     },
 
-    // add first page with separator
+    // Adiciona o separador ... na ultima pagina
     First: function() {
         Pagination.code += '<a>1</a><i>...</i>';
     },
@@ -88,16 +88,16 @@ var Pagination = {
 
 
     // --------------------
-    // Handlers
+    // Manipuladores
     // --------------------
 
-    // change page
+    // Muda Pagina
     Click: function() {
         Pagination.page = +this.innerHTML;
         Pagination.Start();
     },
 
-    // previous page
+    // Pagina Anterior
     Prev: function() {
         Pagination.page--;
         if (Pagination.page < 1) {
@@ -106,7 +106,7 @@ var Pagination = {
         Pagination.Start();
     },
 
-    // next page
+    // Proxima Pagina
     Next: function() {
         Pagination.page++;
         if (Pagination.page > Pagination.size) {
@@ -121,7 +121,7 @@ var Pagination = {
     // Script
     // --------------------
 
-    // binding pages
+    // corrente de paginas
     Bind: function() {
         var a = Pagination.e.getElementsByTagName('a');
         for (var i = 0; i < a.length; i++) {
@@ -130,14 +130,14 @@ var Pagination = {
         }
     },
 
-    // write pagination
+    // Escreve a Paginação
     Finish: function() {
         Pagination.e.innerHTML = Pagination.code;
         Pagination.code = '';
         Pagination.Bind();
     },
 
-    // find pagination type
+    // Encontra o tipo de paginação
     Start: function() {
         if (Pagination.size < Pagination.step * 2 + 6) {
             Pagination.Add(1, Pagination.size + 1);
@@ -161,23 +161,23 @@ var Pagination = {
 
 
     // --------------------
-    // Initialization
+    // Inicialização
     // --------------------
 
-    // binding buttons
+    // Butões de Antes e Depois
     Buttons: function(e) {
         var nav = e.getElementsByTagName('a');
         nav[0].addEventListener('click', Pagination.Prev, false);
         nav[1].addEventListener('click', Pagination.Next, false);
     },
 
-    // create skeleton
+    // Cria o esqueleto
     Create: function(e) {
 
         var html = [
-            '<a>&#9668;</a>', // previous button
-            '<span></span>',  // pagination container
-            '<a>&#9658;</a>'  // next button
+            '<a>&#9668;</a>', // Botão anterior
+            '<span></span>',  // Container da Paginação
+            '<a>&#9658;</a>'  // Proximo botão
         ];
 
         e.innerHTML = html.join('');
@@ -196,14 +196,14 @@ var Pagination = {
 
 
 /* * * * * * * * * * * * * * * * *
-* Initialization
+* Inicialização das variaveis
 * * * * * * * * * * * * * * * * */
 
 var init = function() {
     Pagination.Init(document.getElementById('pagination'), {
-        size: 30, // pages size
-        page: 1,  // selected page
-        step: 3   // pages before and after current
+        size: 30, // Tamanho da Pagina
+        page: 1,  // Pagina Selecionada
+        step: 3   // Paginas antes e depois das atuais
     });
 };
 
