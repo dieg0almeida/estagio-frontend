@@ -1,11 +1,14 @@
 footer{
     
     background: #212529;
-    height: auto;
-    position: relative;
-    width: 100%;
+    position: absolute;
     color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
     display: flex;
+    font-size: small;
 }
   
 section#copyright{
