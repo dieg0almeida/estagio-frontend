@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Pagina de Listagem</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style_user_list_page.css">
+	<link rel="stylesheet" type="text/css" href="style_footer.css">
+	<link rel="stylesheet" type="text/css" href="style_navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<!--===============================================================================================-->
+</head>
+<body>
+	<header>
+        
+		{% include "navbar.njk" %}
+
+  	</header>
+
+	<div class="limiter">
+         
+
+		<div class="container-table">
+            
+            
+			<div class="wrap-table">
+            
+				<h1 id="titulo">LISTAGEM DE USUARIOS</h1>
+				
+				<div class="table" >
+
+					<div class="row header">
+						<div id="tableheaderleft" class="cell">
+							EMAIL
+						</div>
+						<div id="tableheader" class="cell" >
+							DATA DE CRIAÇÃO
+						</div>						
+						<div id="tableheaderright" class="cell">
+							#
+						</div>
+						
+						
+					</div>
+				
+					{% for i in range(0, 4) %}
+
+						<div class="row" id="table">
+							<div class="cell" data-title="EMAIL">
+								{{owner.owner_email}}XXXXX@email.com
+							</div>
+							<div class="cell" data-title="DATACRIACAO">
+								{{owner.date}}xx/xx/xxxx
+							</div>
+							
+							<div class="cell" data-title="MAIS DETALHES">
+								<button class="button">Ver</button>
+							</div>
+						</div>
+						
+					{% endfor %}
+
+            	</div>
+				
+                 
+			</div>
+		</div>
+	</div>
+
+	{% include "footer.njk" %}
+
+	<script src="/scripts_user_list_page.js"></script>
+</body>
+</html>
