@@ -2,13 +2,14 @@ var check;
 function checkFields(event){
 
     const valuesToCheck = [
-        "newpassword",
+        "email",
+        "password",
         "confirmpassword",
     ] 
     
     const isEmpty = valuesToCheck.find(function(value){
         
-        var newpassword = document.querySelector('input#newpassword').value;
+        var password = document.querySelector('input#password').value;
         var confirmpassword = document.querySelector('input#confirmpassword').value;
 
         const checkIfIsString = typeof event.target[value].value ==="string"
@@ -19,7 +20,7 @@ function checkFields(event){
             return true
             
         }
-        if(newpassword != confirmpassword){
+        if(password != confirmpassword){
             check = 1
             return true
             

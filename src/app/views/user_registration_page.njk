@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Novo Usuário</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style_user_registration_page.css">
+	<link rel="stylesheet" type="text/css" href="style_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<!--===============================================================================================-->
+</head>
+<body>
+    
+    <main class="user-registration-page">
+      
+        <div class="form">
+          <h3><i class="fa fa-key fa-4x"  style="color:#FFFFFF;"></i></h3>
+          <h1 class="text-center" style="color:#FFFFFF;" >Novo Usuário</h1>
+          <form class="new-user-form" action="#" method="POST" onsubmit="return checkFields(event)">
+           
+            <input type="email" id="email" placeholder="Digite seu email" name="email"/>
+            <input type="password" id="password" placeholder="Digite sua senha" name="password"/>
+            <input type="password" id="confirmpassword" placeholder="Confirme a senha digitada" name="confirmpassword"/>
+                
+            <button>Cadastrar</button>
+
+            <div id="emptyFields">
+              <p></p>
+            </div>
+            
+          </form>
+        </div>
+
+    </main>
+    
+  {% include "footer.njk" %}
+  <script src="/scripts_user_registration_page.js"></script>
+   
+</body>
+</html>

@@ -1,13 +1,13 @@
 footer{
     
     background: #212529;
-    position: absolute;
+    position:relative;
     color: white;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: auto;
     height: 150px;
-    display: flex;
+    display:flex;
     font-size: small;
 }
   
