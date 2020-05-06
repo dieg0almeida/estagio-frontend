@@ -7,13 +7,11 @@
 }
 
 body, html {
-    background: linear-gradient(to top,  #daa520 20%, #0000ff 89%, #0000a4);
-  
+  background: linear-gradient(to top,  #daa520 20%, #0000ff 89%, #0000a4);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 	height: auto;
-	font-family: sans-serif;
 }
 
 /* ------------------------------------ */
@@ -30,15 +28,6 @@ body, html {
 
 
 /* Current/active navbar link */
-
-
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar  {
-    float: none;
-    display: block;
-  }
-}
 
 /*BOTÃO DE BUSCA FILTRAR AO LADO DO TEXTO*/
 .buttonsearch {

@@ -4,10 +4,17 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
+body, html {
+  background: linear-gradient(to top, #daa520 0%, #0000ff 100%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  height: auto;   
+}
 .login-page {
-  width: 360px;
+  width: 100%;
   padding: 8% 0 0;
-  margin: auto;
+  margin: 0 auto;  
 }
 
 #emptyFields p {
@@ -83,15 +90,6 @@
 .form .message a {
   color: #4CAF50;
   text-decoration: none;
-}
-
-
-body, html {
-  background: linear-gradient(to top, #daa520 0%, #0000ff 100%);
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
-  height: 100%;   
 }
 
 img{
