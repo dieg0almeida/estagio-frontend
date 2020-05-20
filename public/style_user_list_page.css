@@ -7,7 +7,7 @@
 }
 
 body, html {
-  background: linear-gradient(to top,  #daa520 20%, #0000ff 89%, #0000a4);
+  background: linear-gradient(to top,rgba(218,165,32,0.2) 20%,rgba( 0, 0, 255, 0.2) 89%, rgba(0,0,164,0.8));
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
