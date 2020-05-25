@@ -4,5 +4,26 @@
     <a id="navicon" href="#"><i class="fa fa-fw fa-home" style="font-size:24px;"></i> Inicio</a>
     <a id="navicon" href="#"><i class="fa fa-fw fa-envelope" style="font-size:24px;"></i> Sobre</a>
     <a id="navicon" href="#"><i class="fa fa-fw fa-phone" style="font-size:24px;"></i> Contato</a>
-    <a id="usericon" href="#"><i class="fa fa-fw fa-user-circle-o" style="font-size:36px;"></i></a>
+    <ul class="accounts">
+        <li>
+            <a id="usericon" href="#"><i class="fa fa-fw fa-user-circle-o" style="font-size:36px;"></i></a>
+            {%if user%}
+            <ul class="submenu">
+                <li>
+                    <a href="#">Minha conta</a>
+                </li>
+                <li>
+                    <a href="#">Cadastro</a>
+                </li>
+                <li>
+                    <form action="/" method="POST">
+                        <button>Sair</button>
+                    </form>
+                </li>
+            </ul>
+            {%endif%}
+           
+        </li>
+    </ul>
+    
 </div>
